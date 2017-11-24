@@ -1,0 +1,612 @@
+.site{
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(https://imgur.com/o3ZV0U2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: rgb(243, 242, 242);
+    margin-top: 0;
+    padding-top: 0;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(248, 246, 246);
+    font-size: 1.5em;
+}
+
+a:hover, a:active{
+    color: rgb(218, 218, 218);
+    text-shadow: 1px 1px 1px black;
+}
+
+h2{
+    border-bottom: 1px solid white;
+}
+
+h3, h4{
+    padding-left: 0.6em;
+}
+
+.certificate-container{
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.top-wrap a{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+}
+
+/* Header --> logo + menu */
+.menu{
+    display: none;
+}
+
+
+.logo-desktop{
+    max-width: 260px;
+    max-height: 150px;
+}
+
+.text-container h1{
+    font-weight: normal;
+    font-size: 1.2em;
+    padding: 0 0.5em;
+}
+
+
+
+@supports (grid-area: auto){
+.menu{
+    display: grid;
+}
+
+    .container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    padding: 1em;
+    margin-top: 50px;
+    }
+}
+
+.container h2, .container p{
+    padding: 0.5em;
+    margin-top: 0;
+}
+
+.container section, .container aside, .container footer{
+    background-color: rgba(23, 23, 23, 0.8);
+}
+.container nav, .logo-mobile, .toggle{
+    background-color: rgba(23, 23, 23, 0.95);
+}
+
+.logo-mobile img{
+    width: 90vw;
+    height: auto;
+    max-height: 85px;
+}
+
+.logo-mobile{
+    position: fixed;
+    top: -10px;
+    width: 90vw;
+}
+
+header{
+    max-width: 100%;
+}
+
+
+
+/* ---- photos main-section ---- */
+.photo-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1em;
+    max-width: 800px;
+}
+
+.photo-container figure{
+    padding: 0.5em;
+    margin: 5px;
+    /*background-color: rgba(90, 87, 87, 0.8);*/
+    border-radius: 5px;
+    flex: 1;
+    min-width: 180px;
+    
+}
+
+.photo-container figure:nth-child(n+3){
+    display: none;
+}
+
+
+.photo-container img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* Maskinutrustning + area Mobile first */
+@supports (grid-area: auto){
+    .photo-container figure{
+        background-color: rgba(90, 87, 87, 0.8);
+    }
+
+    .photo-container figure:nth-child(n+3){
+        display: block;
+    }
+
+}
+
+.machines th{
+    border-bottom: 1px solid white;
+    text-align: left;
+}
+
+.area th{
+    text-align:left;
+    text-decoration: underline;
+}
+
+/* -----  Aside medarbetar-bilderna  -------- */
+.employee-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photo-card{
+    box-shadow: 0 10px 10px rgba(240, 237, 237, 0.25), 0 5px 5px rgba(243, 241, 241, 0.22);
+    border-radius: 2px;
+    margin: 2px;
+    padding: 5px;
+    text-align: center;
+    width: 130px;
+}
+
+.photo-card img{
+    width: 120px;
+    height: 160px;
+    border: 1px solid black;
+}
+
+figcaption span{
+    font-size: small;
+}
+
+/* Aside samarbetspartners */
+.partners li a{
+    font-size: 1em;
+}
+.partners li{
+    padding: 0.5em;
+}
+
+.partners-title{
+    margin-top: 1em!important;
+}
+
+/* Certifieringarna länkar */
+.module-card3 a{
+    font-size: 1em;
+    text-decoration: underline;
+}
+
+#page-author{
+    text-align: center;
+    
+}
+
+
+@media screen and (min-width: 900px){
+  
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    height: 470px;
+    padding: 1em;
+    background-color: rgba(23, 23, 23, 0.8);
+  }
+  
+  .mySlides {
+      display: none;
+  }
+ /* Switching languages */ 
+  .language{
+    grid-column: end;
+    padding-top: 20px;
+}
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    text-shadow: 1px 1px 1px black;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 900px;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor:pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    z-index: 10;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }    
+  /* End slide-show styling */
+
+  .certificate-container{
+      padding: 1em;
+      margin: 2em 5em;
+  }
+}
+@media screen and (min-width: 1200px){
+    .slideshow-container{
+        padding: 1em 7em;
+    }
+
+    
+}
+
+  /* ---- For desktop ---- */
+@media only screen and (min-width: 600px) {
+.anchor{
+    padding-top: 115px;
+}
+
+ /* grid */
+ @supports (grid-area: auto){
+ .container {
+   grid-template-columns: repeat(3, 1fr) 320px;
+   grid-gap: 1em;
+   margin: 1em;
+ }
+  
+ .container header,
+ .container nav,
+ .container .module-card2,
+ .container .module-card3,
+ .container footer {
+   grid-column: span 4;
+ }
+
+ .module-card {
+   grid-column: span 3;
+ }
+
+ .module-card3 p{
+     display: inline-block;
+     text-align: center;
+ }
+
+ .container aside{
+     grid-column: 4;
+     grid-row: 2/3;
+     padding: 0.3em;
+    }
+ } /* ------ End grid-style */
+
+
+
+/* History, Machines, area tables */
+.history-table{
+    width: 100%;
+    padding: 1em;
+}
+
+.history-table td{
+    padding: 10px; 
+}
+
+.machines, .area{
+    width: 80%;
+    padding: 1em;
+}
+
+
+
+ .container header{
+     margin-top: 62px;
+ }
+
+/* Hide mobile-logo in desktop-view */
+.logo-mobile{
+    display: none;
+}
+
+.logo-desktop{
+    width:100%;
+    padding: 0.8em;
+}
+
+.logo-desktop img{
+    width: 100%;
+}
+
+.menu{
+    padding-top: 20px;
+}
+
+@supports (grid-area: auto){
+.map-contact-wrap{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.contact-info{
+    grid-column: 1;
+    grid-row: 1;
+}
+#map{
+    grid-column: 2;
+    grid-row: 1;
+    }
+}
+
+/* Fallback: */
+#map{
+    height: 300px;
+    width: auto;
+}
+
+
+@media only screen and (max-width: 900px) and (min-width: 600px){
+    .slideshow-container{
+        display: none;
+    }
+    .dot{
+        display: none;
+    }
+
+    .machines, .area{
+        width: 100%;
+    }
+    
+    /* Switching languages */
+    .language{
+        grid-column: 4/5;
+        padding-top: 40px;
+    }
+
+  
+
+    @supports (grid-area: auto){
+    .container #nav{
+        height: 140px;
+    }
+
+    #wrapper{
+        display: grid;
+        grid-template-rows: 60px 60px;
+        align-content: space-around;
+    }
+    .logo-desktop{
+        grid-column: 1/2;
+        grid-row: 1;
+        width: 100%;
+    }
+    .menu{
+        grid-row: 2;
+    }
+    .menu:nth-child(3){
+        grid-column: 1/2;
+    }
+    .menu:nth-child(4){
+        grid-column: 2/3;
+    }
+
+    /* Styling map and contacts */
+    .map-contact-wrap{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .contact-info{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    #map{
+        height: 300px;
+        width: auto;
+        grid-column: 1;
+        grid-row: 2;
+    }
+}
+}
+
+
+#nav{
+    position: fixed;
+    top: -10px;
+    width: 97vw;
+    
+}
+
+@supports (grid-area: auto){
+ #wrapper{
+    display: grid;
+    grid-template-columns: 260px repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+ }
+}
+
+/* products text + photo boxing */
+.wrapper-products{
+    display: flex;
+}
+
+.text-container{
+    flex: 1;
+}
+
+.photo-container{
+    flex: 2;
+}
+
+
+
+/* Footer */
+footer{
+    padding: 1em;
+}
+
+footer p{
+    margin: 5px;
+}
+
+.company-info{
+    text-align: center;
+    width: 90vw;
+    margin-top: 1em !important;
+    padding-top: 1em;
+    border-top: 1px solid white;    
+}
+
+
+.fa{
+    font-size: 24px;
+    padding-right: 4px;
+}
+ 
+ .toggle{
+     display: none;
+ }
+
+ p>span{
+     padding-right: 1.2em;
+     text-decoration: underline;
+ }
+  
+}
+
+
+
+@media only screen and (max-width: 599px) {
+    .site{
+        background-image: none;
+        background-color: rgb(105, 103, 103);
+    }
+    
+    .slideshow-container{
+        display: none;
+    }
+    .dot{
+        display: none;
+    }
+
+    .anchor{
+        padding-top: 90px;
+    }
+
+    .toggle{
+        font-size: 2em;
+        padding-left: 0.5em;
+    } 
+    header figure{
+        display: none;
+    }
+
+    .logo-desktop{
+        display: none;
+    }
+
+
+    .history-table td{
+        border-bottom: 1px solid white;
+        padding: 5px;
+    }
+    .machines, .area{
+        width: 100%;
+        padding: 0 0 0.5em 0.5em;
+    }
+
+   #map{
+       height: 300px;
+       width: auto;
+       max-width: 500px;
+       margin: 1em 0;
+   }
+    
+    #nav {
+         position: fixed; 
+         top: 0;
+         bottom: 0;
+         width: 300px;
+         left: -340px;
+         transition: transform .3s ease-in-out;
+         padding: 0.8em;
+     }
+
+     #nav:target {
+        transform: translateX(340px);
+      }
+
+    .menu, .language{
+        padding-top:1em;
+    }
+
+    .menu:nth-last-of-type(1){
+        padding-bottom: 15px;
+        border-bottom: 1px solid white;
+    }
+
+    p{
+        margin: 0;
+    }
+    .contact-info p, .company-info{
+        font-size: 0.9em;
+        text-align: center;
+    }
+ }
+
+
