@@ -508,6 +508,7 @@ figcaption span{
 /* Footer */
 footer{
     padding: 1em;
+    width: 98%;
 }
 
 footer p{
@@ -516,7 +517,7 @@ footer p{
 
 .company-info{
     text-align: center;
-    width: 90vw;
+    /*width: 90vw;*/
     margin-top: 1em !important;
     padding-top: 1em;
     border-top: 1px solid white;    
