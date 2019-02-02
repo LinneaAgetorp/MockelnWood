@@ -73,6 +73,7 @@ h3, h4{
     grid-gap: 10px;
     padding: 1em;
     margin-top: 50px;
+    max-width: 1200px;
     }
 }
 
@@ -82,7 +83,7 @@ h3, h4{
 }
 
 .container section, .container aside, .container footer{
-    background-color: rgba(23, 23, 23, 0.8);
+    background-color: rgba(23, 23, 23, 0.94);
 }
 .container nav, .logo-mobile, .toggle{
     background-color: rgba(23, 23, 23, 0.95);
@@ -97,7 +98,9 @@ h3, h4{
 .logo-mobile{
     position: fixed;
     top: -10px;
-    width: 90vw;
+    left: 0;
+    width: 100vw;
+    padding: 0 0.6em;
 }
 
 header{
@@ -117,7 +120,6 @@ header{
 .photo-container figure{
     padding: 0.5em;
     margin: 5px;
-    /*background-color: rgba(90, 87, 87, 0.8);*/
     border-radius: 5px;
     flex: 1;
     min-width: 180px;
@@ -139,7 +141,7 @@ header{
 /* Maskinutrustning + area Mobile first */
 @supports (grid-area: auto){
     .photo-container figure{
-        background-color: rgba(90, 87, 87, 0.8);
+        background-color: rgba(23, 23, 23, 0.9);
     }
 
     .photo-container figure:nth-child(n+3){
@@ -162,21 +164,21 @@ header{
 .employee-container{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .photo-card{
-    box-shadow: 0 10px 10px rgba(240, 237, 237, 0.25), 0 5px 5px rgba(243, 241, 241, 0.22);
-    border-radius: 2px;
+    border-radius: 4px;
     margin: 2px;
     padding: 5px;
     text-align: center;
     width: 130px;
+    background-color: rgba(23, 23, 23, 0.94);
 }
 
 .photo-card img{
     width: 120px;
     height: 160px;
-    border: 1px solid black;
 }
 
 figcaption span{
@@ -196,6 +198,11 @@ figcaption span{
 }
 
 /* Certifieringarna länkar */
+.module-card3 > article > p {
+    text-align: left;
+    margin: 0;
+}
+
 .module-card3 a{
     font-size: 1em;
     text-decoration: underline;
@@ -216,7 +223,7 @@ figcaption span{
     margin: auto;
     height: 470px;
     padding: 1em;
-    background-color: rgba(23, 23, 23, 0.8);
+    background-color: rgba(23, 23, 23, 0.9);
   }
   
   .mySlides {
@@ -310,6 +317,8 @@ figcaption span{
    grid-template-columns: repeat(3, 1fr) 320px;
    grid-gap: 1em;
    margin: 1em;
+   margin: 0 auto;
+   justify-items: center;
  }
   
  .container header,
@@ -467,8 +476,9 @@ figcaption span{
 #nav{
     position: fixed;
     top: -10px;
-    width: 97vw;
-    
+    width: 95vw;
+    left: 1%;
+    padding: 0 1em;
 }
 
 @supports (grid-area: auto){
@@ -534,7 +544,7 @@ footer p{
 @media only screen and (max-width: 599px) {
     .site{
         background-image: none;
-        background-color: rgb(105, 103, 103);
+        background-color: rgb(50, 69, 50);
     }
     
     .slideshow-container{
@@ -550,7 +560,7 @@ footer p{
 
     .toggle{
         font-size: 2em;
-        padding-left: 0.5em;
+        padding: 0.4em 0.4em 0 0.4em;
     } 
     header figure{
         display: none;
